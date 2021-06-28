@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </link>
+
+    <title>ludo</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>js ludo</h1>
+        <div class="dice">
+            <p class="rtg">player1</p>
+
+            <img src="images\dice5.jpg" class="width" id="chck1">
+
+            <div class="dice">
+                <p class="rtn">player2</p>
+
+                <img src="images\dice6.jpg"id="chck2">
+            <div class="wrapper">
+                <button onclick=ludo() class="xnxx">clickme</button>
+            </div>
+
+
+            </div>
+        
+
+
+        </div>
+        <script>
+            ludo=()=>{
+            let bt=Math.floor(Math.random()*6)+1;
+            let en=`images/dice${bt}.jpg`;
+            document.getElementById("chck1").setAttribute('src',en); 
+
+            let bt2=Math.floor(Math.random()*6)+1;
+            let en2=`images/dice${bt2}.jpg`;
+            document.getElementById("chck2").setAttribute('src',en2); 
+            if(bt<bt2){
+               document.querySelector('h1').innerHTML="player2 jeet gaya"
+           }else if(bt>bt2){
+            document.querySelector('h1').innerHTML="player1 jeet gaya"
+           }else{
+            document.querySelector('h1').innerHTML="draw"
+           }
+            }
+
+        //    if(bt<bt2){
+        //        document.querySelector('h1').innerHTML="player2 jeet gaya"
+        //    }else if(bt>bt2){
+        //     document.querySelector('h1').innerHTML="player1 jeet gaya"
+        //    }else{
+        //     document.querySelector('h1').innerHTML="draw"
+        //    }
+            
+                
+            
+
+          
+           
+           
+
+
+        </script>
+
+</body>
+
+</html>
